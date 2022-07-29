@@ -6,19 +6,22 @@ The website we will be testing is: https://demo.realworld.io/#
 
 ### Structure
 
-Articles
+# Articles
   - article_details.cy.js
   - article_new.cy.js
   - article_list.cy.js
-Author
+
+# Author
   - author_details.cy.js
-Shared
+
+# Shared
   - header.cy.js
-User
+
+# User
   - login.cy.js
   - register.cy.js
   - settings.cy.js
 
-// Create a test file for auth/security checks like:
-url manipulation
-sql injection
+## Create a test file for auth/security checks like:
+- URL manipulation
+- SQL injection
