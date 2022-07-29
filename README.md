@@ -21,7 +21,3 @@ The website we will be testing is: https://demo.realworld.io/#
   - login.cy.js
   - register.cy.js
   - settings.cy.js
-
-## Create a test file for auth/security checks like:
-- URL manipulation
-- SQL injection
