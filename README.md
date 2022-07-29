@@ -4,8 +4,6 @@ Here I'll be practicing my testing skills with Cypress :)
 
 The website we will be testing is: https://demo.realworld.io/#
 
-Testing Structure
-
 ## Articles
   - article_details.cy.js
   - article_new.cy.js
