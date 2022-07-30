@@ -9,9 +9,6 @@ The website we will be testing is: https://demo.realworld.io/#
   - article_new.cy.js
   - article_list.cy.js
 
-## Author
-  - author_details.cy.js
-
 ## Shared
   - home.cy.js [X]
 
