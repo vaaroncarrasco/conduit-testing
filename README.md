@@ -13,9 +13,9 @@ The website we will be testing is: https://demo.realworld.io/#
   - author_details.cy.js
 
 ## Shared
-  - header.cy.js
+  - home.cy.js [X]
 
 ## User
-  - login.cy.js
-  - register.cy.js
-  - settings.cy.js
+  - login.cy.js [X]
+  - register.cy.js [X]
+  - settings.cy.js [X]
