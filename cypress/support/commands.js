@@ -1,3 +1,5 @@
+import mockArticle from '../utils/mockArticle';
+
 Cypress.Commands.add('login', () => {
   cy.request({
     method: 'POST',
@@ -22,3 +24,30 @@ Cypress.Commands.add('footerDisplays', () => {
   cy.get('[href="https://github.com/gothinkster/angularjs-realworld-example-app"]')
     .should('be.visible');
 })
+
+// Create article through API
+// Authorization: `${localStorage.getItem('jwtToken')}`
+
+Cypress.Commands.add('newArticle', () => {
+
+  cy.log(localStorage.getItem('jwtToken'));
+
+  cy.request({
+    method: 'POST',
+    url: `${Cypress.env('apiURL')}/articles`,
+    body: {
+      article: { ...mockArticle() }
+    },
+    headers: {
+      authorization: `Token ${localStorage.getItem('jwtToken')}`
+    }
+  }).then((resp) => {
+
+    localStorage.setItem('newArticle', JSON.stringify(resp.body['article']) );
+
+  })
+
+})
+
+
+
