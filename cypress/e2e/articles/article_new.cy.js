@@ -1,22 +1,11 @@
-import { faker } from '@faker-js/faker';
+import mockArticle from '../../utils/mockArticle';
 
 let articleMock;
 
 describe('New article functionality', () => {
 
   beforeEach(() => {
-
-    articleMock= {
-      title: faker.lorem.sentence(1),
-      description: faker.lorem.sentence(2),
-      body: faker.lorem.paragraph(2),
-      tags: [
-        faker.lorem.word(),
-        faker.lorem.word(),
-        faker.lorem.word(),
-      ]
-    }
-
+    articleMock = mockArticle();
     cy.login()
     cy.visit('/editor/')
   })
@@ -27,7 +16,7 @@ describe('New article functionality', () => {
     cy.get(':nth-child(2) > .form-control').type(articleMock.description)
     cy.get(':nth-child(3) > .form-control').type(articleMock.body)
 
-    articleMock.tags.forEach(tag => {
+    articleMock.tagList.forEach(tag => {
       cy.get(':nth-child(4) > .form-control').type(`${tag}{enter}`)
     })
 
