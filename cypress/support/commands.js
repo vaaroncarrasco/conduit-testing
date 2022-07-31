@@ -43,7 +43,9 @@ Cypress.Commands.add('newArticle', () => {
     }
   }).then((resp) => {
 
-    localStorage.setItem('newArticle', JSON.stringify(resp.body['article']) );
+    cy.visit(`/article/${resp.body.article.slug}`)
+
+    localStorage.setItem('newArticle', JSON.stringify(resp.body.article) );
 
   })
 
