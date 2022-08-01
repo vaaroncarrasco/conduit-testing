@@ -30,8 +30,6 @@ Cypress.Commands.add('footerDisplays', () => {
 
 Cypress.Commands.add('newArticle', () => {
 
-  cy.log(localStorage.getItem('jwtToken'));
-
   cy.request({
     method: 'POST',
     url: `${Cypress.env('apiURL')}/articles`,
