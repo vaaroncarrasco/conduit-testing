@@ -50,6 +50,3 @@ Cypress.Commands.add('newArticle', () => {
   })
 
 })
-
-
-
