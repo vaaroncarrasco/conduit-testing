@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "node_modules/.bin/cypress open"
+    "cypress:open": "node_modules/.bin/cypress open",
+    "cypress:chrome": "node_modules/.bin/cypress run --spec cypress/e2e --browser chrome",
+    "cypress:firefox": "node_modules/.bin/cypress run --spec cypress/e2e --browser firefox",
+    "cypress:edge": "node_modules/.bin/cypress run --spec cypress/e2e --browser edge"
   },
   "keywords": [],
   "author": "",
