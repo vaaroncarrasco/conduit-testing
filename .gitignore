@@ -2,5 +2,5 @@ node_modules/
 package-lock.json
 cypress.env.json
 notes.md
-screenshots/
-videos/
+cypress/screenshots/
+cypress/videos/
